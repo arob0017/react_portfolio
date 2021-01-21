@@ -22,17 +22,19 @@
 }
 
 .nav-link {
-    color: black !important;
+    color: white;
     font-weight: bold;
-    font-size: 18px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 }
 .card-link {
     color: #27283b !important;
 }
+.card-title {
+    text-align: center;
+}
 .btn-light {
-    color: white;
+    color: white !important;
     background-color: #27283b;
 }
 /* main content */
@@ -60,13 +62,25 @@ img {
 .smallCard{
     min-width: 200px;
     min-height: 430px;
+    font-weight: 300 !important;
+    font-size: 15px !important;
     
 }
 .largeCard {
-    min-height: 570px
+    min-height: 570px;
+    text-align: center;
+    margin-left: 0px !important;
 }
 .sweetSpot, .spinMeal {
     max-height: 346px;
+}
+.portfolioNavLink {
+    color: black !important;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left: 20px;
 }
 
 @media only screen and (max-width: 992px) {

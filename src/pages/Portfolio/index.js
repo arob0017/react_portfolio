@@ -1,7 +1,26 @@
 import React from "react";
-import { Button, Card, Col, Nav, Row } from "react-bootstrap";
+import { Button, Card, Col, Image, Nav, Row } from "react-bootstrap";
 import "./style.css";
+import { Link } from "react-router-dom";
 
+
+// Gif
+import SweetSpot from "../../assets/gifs/Holiday-Sweetspot.gif"
+import SpinMeal from "../../assets/gifs/Spin-That-Meal.gif"
+import ScoobyShack from "../../assets/gifs/Scooby-Shack.gif"
+import CodeQuiz from "../../assets/gifs/Code-Quiz.gif"
+import Weather from "../../assets/gifs/Weather-Dashboard.gif"
+import NoteTaker from "../../assets/gifs/Note-Taker.gif"
+
+// Images
+import books from "../../assets/images/books.jpg"
+import perfRecite from "../../assets/images/perf-recite.JPG"
+import jam from "../../assets/images/jam.JPG"
+import perfSynths from "../../assets/images/perf-synths.JPG"
+import pratoSet from "../../assets/images/prato-sunset1.jpeg"
+import lake from "../../assets/images/lake.jpg"
+import lampost from "../../assets/images/lamp-post.jpeg"
+import pratoSetTwo from "../../assets/images/prato-sunset2.jpeg"
 
 function Portfolio() {
     return (
@@ -11,16 +30,16 @@ function Portfolio() {
                 <h2>My Portfolio</h2>
                 <Nav className="justify-content-end portfolionav">
                     <Nav.Item>
-                        <Nav.Link href="#webdevelopment">Webdevelopment</Nav.Link>
+                        <Link className="portfolioNavLink" to="#webdevelopment">Webdevelopment</Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Nav.Link href="#performance">Performance</Nav.Link>
+                        <Link className="portfolioNavLink" to="#performance">Performance</Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Nav.Link href="#teaching">Teaching</Nav.Link>
+                        <Link className="portfolioNavLink" to="#teaching">Teaching</Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Nav.Link href="#photography">Photography</Nav.Link>
+                        <Link className="portfolioNavLink" to="#photography">Photography</Link>
                     </Nav.Item>
                 </Nav>
             </section>
@@ -33,8 +52,8 @@ function Portfolio() {
                 </Row>
                 <Row>
                     <Col>
-                        <Card className="largeCard">
-                            <Card.Img variant="top" className="sweetSpot" src="./photos/Holiday-Sweetspot.gif"
+                        <Card className="text-center largeCard">
+                            <Card.Img variant="top" className="sweetSpot" src={SweetSpot}
                                 alt="Screenshot of Application" />
                             <Card.Body>
                                 <Card.Title>Holiday Sweetspot</Card.Title>
@@ -48,8 +67,8 @@ function Portfolio() {
                         </Card>
                     </Col>
                     <Col>
-                        <Card className="largeCard">
-                            <Card.Img variant="top" className="spinMeal" src="./photos/Spin-That-Meal.gif"
+                        <Card className="text-center largeCard">
+                            <Card.Img variant="top" className="spinMeal" src={SpinMeal}
                                 alt="Screenshot of Application" />
                             <Card.Body>
                                 <Card.Title>Spin That Meal</Card.Title>
@@ -68,8 +87,8 @@ function Portfolio() {
                 </Row>
                 <Row>
                     <Col>
-                        <Card className="smallCard">
-                            <Card.Img variant="top" src="./photos/Scooby-Shack.gif" alt="Screenshot of Application" />
+                        <Card className="text-center smallCard">
+                            <Card.Img variant="top" src={ScoobyShack} alt="Screenshot of Application" />
                             <Card.Body>
                                 <Card.Title>Scooby Shack</Card.Title>
                                 <Card.Text>A restaurant app that lets users input the names of
@@ -77,14 +96,14 @@ function Portfolio() {
                                 </Card.Text>
                                 <Button variant="light" target="_blank" href="https://scooby-shack.herokuapp.com/" rel="noreferrer">See
                                 Application</Button>
-                                <Card.Link target="_blank" href="https://github.com/arob0017/Burger" rel="noreferrer">Github
-                                Repo</Card.Link>
+                                <Button variant="light" target="_blank" href="https://github.com/arob0017/Burger" rel="noreferrer">Github
+                                Repo</Button>
                             </Card.Body>
                         </Card>
                     </Col>
                     <Col>
-                        <Card className="smallCard">
-                            <Card.Img variant="top" src="./photos/Code-Quiz.gif" alt="Screenshot of Application" />
+                        <Card className="text-center smallCard">
+                            <Card.Img variant="top" src={CodeQuiz} alt="Screenshot of Application" />
                             <Card.Body>
                                 <Card.Title>Code Quiz</Card.Title>
                                 <Card.Text>A quiz about javascript using mainly javascript. Includes a countdown
@@ -92,13 +111,13 @@ function Portfolio() {
                                 </Card.Text>
                                 <Button variant="light" target="_blank" href="https://arob0017.github.io/Code_Quiz/" rel="noreferrer">See
                                 Application</Button>
-                                <Card.Link target="_blank" href="https://github.com/arob0017/Code_Quiz" rel="noreferrer">Github Repo</Card.Link>
+                                <Button variant="light" target="_blank" href="https://github.com/arob0017/Code_Quiz" rel="noreferrer">Github Repo</Button>
                             </Card.Body>
                         </Card>
                     </Col>
                     <Col>
-                        <Card className="smallCard">
-                            <Card.Img variant="top" src="./photos/Note-Taker.gif" alt="Screenshot of Application" />
+                        <Card className="text-center smallCard">
+                            <Card.Img variant="top" src={NoteTaker} alt="Screenshot of Application" />
                             <Card.Body>
                                 <Card.Title>Note Taker</Card.Title>
                                 <Card.Text>Successfully create, delete and save your notes and lists in a place on
@@ -106,13 +125,13 @@ function Portfolio() {
                                 </Card.Text>
                                 <Button variant="light" target="_blank" href="https://notetaker133.herokuapp.com/" rel="noreferrer">See
                                 Application</Button>
-                                <Card.Link target="_blank" href="https://github.com/arob0017/Express_Notetaker" rel="noreferrer">Github Repo</Card.Link>
+                                <Button variant="light" target="_blank" href="https://github.com/arob0017/Express_Notetaker" rel="noreferrer">Github Repo</Button>
                             </Card.Body>
                         </Card>
                     </Col>
                     <Col>
-                        <Card className="smallCard">
-                            <Card.Img variant="top" src="./photos/Weather-Dashboard.gif" alt="Screenshot of Application" />
+                        <Card className="text-center smallCard">
+                            <Card.Img variant="top" src={Weather} alt="Screenshot of Application" />
                             <Card.Body>
                                 <Card.Title>Weather Dashboard</Card.Title>
                                 <Card.Text>This is an application for Travelers that want to travel Australia! See
@@ -120,7 +139,7 @@ function Portfolio() {
                                 </Card.Text>
                                 <Button variant="light" target="_blank" href="https://arob0017.github.io/Weather_Dashboard/"
                                     rel="noreferrer">See Application</Button>
-                                <Card.Link target="_blank" href="https://github.com/arob0017/Weather_Dashboard" rel="noreferrer">Github Repo</Card.Link>
+                                <Button variant="light" target="_blank" href="https://github.com/arob0017/Weather_Dashboard" rel="noreferrer">Github Repo</Button>
                             </Card.Body>
                         </Card>
                     </Col>
@@ -130,28 +149,16 @@ function Portfolio() {
             <section id="performance" className="box">
                 <h3>Performance</h3>
                 <Row>
+
                     <Col>
-                        <Row>
-                            <Col>
-                                <img src="photos/perf-recite.JPG" alt="Performing my recital 2018" />
-                            </Col>
-                            <Col>
-                                <img src="photos/jam.JPG" alt="jam" />
-                            </Col>
-                        </Row>
+                        <Image src={perfRecite} alt="Performing my recital 2018" fluid />
                     </Col>
                     <Col>
-                        <Row>
-                            <Col>
-                                <img src="photos/perf-synths.JPG" alt="Prato performance with synths" />
-                            </Col>
-                            <Col>
-                                <img src="photos/piano.jpg" alt="piano" />
-                            </Col>
-                        </Row>
+                        <Image src={jam} alt="jam" fluid />
                     </Col>
-                    <Col className="center">
-                        <img src="photos/musicme2.jpeg" alt="photoshoot img" />
+
+                    <Col>
+                        <Image src={perfSynths} alt="Prato performance with synths" fluid />
                     </Col>
                 </Row>
             </section>
@@ -160,16 +167,16 @@ function Portfolio() {
                 <h3>Teaching</h3>
                 <Row>
                     <Col>
-                        <img src="photos/books.jpg" alt="books" />
+                        <Image src={books} alt="books" fluid />
                     </Col>
                     <Col>
-                        <img src="photos/books.jpg" alt="books" />
+                        <Image src={books} alt="books" fluid />
                     </Col>
                     <Col>
-                        <img src="photos/books.jpg" alt="books" />
+                        <Image src={books} alt="books" fluid />
                     </Col>
                     <Col>
-                        <img src="photos/books.jpg" alt="books" />
+                        <Image src={books} alt="books" fluid />
                     </Col>
                 </Row>
             </section>
@@ -178,18 +185,18 @@ function Portfolio() {
                 <h3>Photography</h3>
                 <Row>
                     <Col>
-                        <img src="photos/prato-sunset1.jpeg" alt="Prato, Italy Sunset" />
+                        <Image src={pratoSet} alt="Prato, Italy Sunset" fluid />
                     </Col>
                     <Col>
-                        <img src="photos/lake.jpg" alt="Prato, Italy Lake" />
+                        <Image src={lake} alt="Prato, Italy Lake" fluid />
                     </Col>
                 </Row>
                 <Row>
                     <Col>
-                        <img src="photos/lamp-post.jpeg" alt="Slazburg lamp-post" />
+                        <Image src={lampost} alt="Slazburg lamp-post" fluid />
                     </Col>
                     <Col>
-                        <img src="photos/prato-sunset2.jpeg" alt="Prato, Tree Sunset" />
+                        <Image src={pratoSetTwo} alt="Prato, Tree Sunset" fluid />
                     </Col>
                 </Row>
             </section>

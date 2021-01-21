@@ -1,13 +1,14 @@
 import React from "react";
 import "./style.css";
-import { Col, Card, Button, Jumbotron, Container, Row } from 'react-bootstrap';
+import { Col, Card, Button, Image, Jumbotron, Container, Row } from 'react-bootstrap';
+import artistAmelia from "../../assets/images/artist_amelia.jpg";
 
 function Contact() {
     return (
         <Container>
             <Jumbotron className="contact">
                 <Row>
-                    <Col>
+                    <Col xs={6}>
                         <Card className="text-center">
                             <Card.Body>
                                 <Card.Title>Contact Me</Card.Title>
@@ -17,7 +18,7 @@ function Contact() {
                         </Card>
                     </Col>
                     <Col>
-                        <img src="../../assets/images/artist_amelia" rel="noreferrer" className="artistAmelia" alt="Amelia Portrait" />
+                        <Image src={artistAmelia} rel="noreferrer" className="artistAmelia" alt="Amelia Portrait" fluid />
                     </Col>
                 </Row>
             </Jumbotron>

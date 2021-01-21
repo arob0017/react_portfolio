@@ -1,6 +1,9 @@
 import React from "react";
 import "./style.css";
-import { Col, Container, Jumbotron, Row } from "react-bootstrap";
+import { Col, Container, Image, Jumbotron, Row } from "react-bootstrap";
+
+import Aboutme from "../../assets/images/About-me-pic.jpg";
+import musicme from "../../assets/images/music-me.jpeg";
 
 function Home() {
     return (
@@ -14,8 +17,8 @@ function Home() {
 
                 <Row>
                     <Col xs={5}>
-                        <img src="./assets/images/About-me-pic.jpg" alt="profile pic" />
-                        <img src="./assets/images/music-me.jpeg" alt="Amelia Roberts pic" />
+                        <Image src={Aboutme} alt="profile pic" fluid />
+                        <Image src={musicme} alt="Amelia Roberts pic" fluid />
                     </Col>
                     <Col xs={7}>
                         <h3>Amelia Roberts</h3>

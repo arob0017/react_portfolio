@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Nav } from 'react-bootstrap';
+import Resume2020 from "../../assets/pdf/Resume2020.pdf"
 import "./style.css";
 
 function Navbar() {
@@ -11,9 +12,10 @@ function Navbar() {
             <Nav className="justify-content-end" activeKey="/home">
                 <Nav.Item>
                     <Link to="/home"
-                        className={
-                            window.location.pathname === "/home" ? "active" : ""
-                        }
+                        // className={
+                        //     window.location.pathname === "/home" ? "active" : ""
+                        // }
+                        className="homeNav"
                         onClick={() => {
                             window.location.href = "/home";
                         }}
@@ -21,22 +23,24 @@ function Navbar() {
                 </Nav.Item>
                 <Nav.Item>
                     <Link to="/portfolio"
-                        className={
-                            window.location.pathname === "/portfolio" ? "active" : ""
-                        }
+                        // className={
+                        //     window.location.pathname === "/portfolio" ? "active" : ""
+                        // }
+                        className="homeNav"
                         onClick={() => {
                             window.location.href = "/portfolio";
                         }}
                     >Portfolio</Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Link to="./Resume2020.pdf" target="_blank">Resume</Link>
+                    <Link to={Resume2020} className="homeNav" target="_blank">Resume</Link>
                 </Nav.Item>
                 <Nav.Item>
                     <Link to='/contact'
-                        className={
-                            window.location.pathname === "/contact" ? "active" : ""
-                        }
+                        // className={
+                        //     window.location.pathname === "/contact" ? "active" : ""
+                        // }
+                        className="homeNav"
                         onClick={() => {
                             window.location.href = "/contact";
                         }}
