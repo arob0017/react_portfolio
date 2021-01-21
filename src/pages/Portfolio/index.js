@@ -1,4 +1,5 @@
 import React from "react";
+import { Button, Card, Col, Nav, Row } from "react-bootstrap";
 import "./style.css";
 
 
@@ -6,171 +7,191 @@ function Portfolio() {
     return (
         <main>
 
-            <section class="box">
-                <nav class="navbar">
-                    <h2>My Portfolio</h2>
-                    <ul class="nav justify-content-end" class="portfolionav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#webdevelopment">Webdevelopment</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#performance">Performance</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#teaching">Teaching</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#photography">Photography</a>
-                        </li>
-                    </ul>
-                </nav>
+            <section className="box">
+                <h2>My Portfolio</h2>
+                <Nav className="justify-content-end portfolionav">
+                    <Nav.Item>
+                        <Nav.Link href="#webdevelopment">Webdevelopment</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                        <Nav.Link href="#performance">Performance</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                        <Nav.Link href="#teaching">Teaching</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                        <Nav.Link href="#photography">Photography</Nav.Link>
+                    </Nav.Item>
+                </Nav>
             </section>
 
-
-
-
-            <section id="webdevelopment" class="box">
-                <div class="row">
-                    <h3 class="col-sm-4">Webdevelopment</h3>
-                </div>
-                <div class="row rowOne">
-                    <div class="col-md-6">
-                        <div class="card largeCard">
-                            <img class="sweetSpot" src="./photos/Holiday-Sweetspot.gif" class="card-img-top"
+            <section id="webdevelopment" className="box">
+                <Row>
+                    <Col>
+                        <h3>Webdevelopment</h3>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <Card className="largeCard">
+                            <Card.Img variant="top" className="sweetSpot" src="./photos/Holiday-Sweetspot.gif"
                                 alt="Screenshot of Application" />
-                            <div class="card-body">
-                                <h5 class="card-title">Holiday Sweetspot</h5>
-                                <p class="card-text">An application to help travellers decide on where to stay!
-                            </p>
-                                <a target="_blank" href=" https://skoggy.github.io/project/" rel="noreferrer" class="btn btn-light">See
-                                Application</a>
-                                <a target="_blank" href="https://github.com/Skoggy/project" rel="noreferrer" class="btn btn-light">Github
-                                Repo</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card largeCard">
-                            <img class="spinMeal" src="./photos/Spin-That-Meal.gif" class="card-img-top"
+                            <Card.Body>
+                                <Card.Title>Holiday Sweetspot</Card.Title>
+                                <Card.Text>An application to help travellers decide on where to stay!
+                                </Card.Text>
+                                <Button variant="light" target="_blank" href=" https://skoggy.github.io/project/" rel="noreferrer">See
+                                Application</Button>
+                                <Button variant="light" target="_blank" href="https://github.com/Skoggy/project" rel="noreferrer">Github
+                                Repo</Button>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    <Col>
+                        <Card className="largeCard">
+                            <Card.Img variant="top" className="spinMeal" src="./photos/Spin-That-Meal.gif"
                                 alt="Screenshot of Application" />
-                            <div class="card-body">
-                                <h5 class="card-title">Spin That Meal</h5>
-                                <p class="card-text">
+                            <Card.Body>
+                                <Card.Title>Spin That Meal</Card.Title>
+                                <Card.Text>
                                     Search for new recipes and create your own, chat to your friends and other members of
                                     the site, update your user details and have fun creating your own personalised
                                     Cook-Book!
-                                </p>
-                                <a target="_blank" href="https://murmuring-reaches-65423.herokuapp.com/"
-                                    rel="noreferrer" class="btn btn-light">See Application</a>
-                                <a target="_blank" href="https://github.com/chrisjmckeown/Spin-that-Meal"
-                                    rel="noreferrer" class="btn btn-light">Github Repo</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row rowTwo">
-                    <div class="col-md-3">
-                        <div class="card smallCard">
-                            <img src="./photos/Scooby-Shack.gif" class="card-img-top" alt="Screenshot of Application" />
-                            <div class="card-body">
-                                <h5 class="card-title">Scooby Shack</h5>
-                                <p class="card-text">A restaurant app that lets users input the names of
+                                </Card.Text>
+                                <Button variant="light" target="_blank" href="https://murmuring-reaches-65423.herokuapp.com/"
+                                    rel="noreferrer">See Application</Button>
+                                <Button variant="light" target="_blank" href="https://github.com/chrisjmckeown/Spin-that-Meal"
+                                    rel="noreferrer">Github Repo</Button>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <Card className="smallCard">
+                            <Card.Img variant="top" src="./photos/Scooby-Shack.gif" alt="Screenshot of Application" />
+                            <Card.Body>
+                                <Card.Title>Scooby Shack</Card.Title>
+                                <Card.Text>A restaurant app that lets users input the names of
                                 burgers they'd like to eat or have devoured!
-                                </p>
-                                <a target="_blank" href="https://scooby-shack.herokuapp.com/" rel="noreferrer" class="btn btn-light">See
-                                Application</a>
-                                <a target="_blank" href="https://github.com/arob0017/Burger" rel="noreferrer">Github
-                                Repo</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card smallCard">
-                            <img src="./photos/Code-Quiz.gif" class="card-img-top" alt="Screenshot of Application" />
-                            <div class="card-body">
-                                <h5 class="card-title">Code Quiz</h5>
-                                <p class="card-text">A quiz about javascript using mainly javascript. Includes a countdown
+                                </Card.Text>
+                                <Button variant="light" target="_blank" href="https://scooby-shack.herokuapp.com/" rel="noreferrer">See
+                                Application</Button>
+                                <Card.Link target="_blank" href="https://github.com/arob0017/Burger" rel="noreferrer">Github
+                                Repo</Card.Link>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    <Col>
+                        <Card className="smallCard">
+                            <Card.Img variant="top" src="./photos/Code-Quiz.gif" alt="Screenshot of Application" />
+                            <Card.Body>
+                                <Card.Title>Code Quiz</Card.Title>
+                                <Card.Text>A quiz about javascript using mainly javascript. Includes a countdown
                                 and keeps track of score history.
-                                </p>
-                                <a target="_blank" href="https://arob0017.github.io/Code_Quiz/" rel="noreferrer" class="btn btn-light">See
-                                Application</a>
-                                <a target="_blank" href="https://github.com/arob0017/Code_Quiz" rel="noreferrer">Github Repo</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card smallCard">
-                            <img src="./photos/Note-Taker.gif" class="card-img-top" alt="Screenshot of Application" />
-                            <div class="card-body">
-                                <h5 class="card-title">Note Taker</h5>
-                                <p class="card-text">Successfully create, delete and save your notes and lists in a place on
+                                </Card.Text>
+                                <Button variant="light" target="_blank" href="https://arob0017.github.io/Code_Quiz/" rel="noreferrer">See
+                                Application</Button>
+                                <Card.Link target="_blank" href="https://github.com/arob0017/Code_Quiz" rel="noreferrer">Github Repo</Card.Link>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    <Col>
+                        <Card className="smallCard">
+                            <Card.Img variant="top" src="./photos/Note-Taker.gif" alt="Screenshot of Application" />
+                            <Card.Body>
+                                <Card.Title>Note Taker</Card.Title>
+                                <Card.Text>Successfully create, delete and save your notes and lists in a place on
                                 your browser no longer needing to worry about losing pieces of scrap papers in your bag.
-                                </p>
-                                <a target="_blank" href="https://notetaker133.herokuapp.com/" rel="noreferrer" class="btn btn-light">See
-                                Application</a>
-                                <a target="_blank" href="https://github.com/arob0017/Express_Notetaker" rel="noreferrer">Github Repo</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card smallCard">
-                            <img src="./photos/Weather-Dashboard.gif" class="card-img-top" alt="Screenshot of Application" />
-                            <div class="card-body">
-                                <h5 class="card-title">Weather Dashboard</h5>
-                                <p class="card-text">This is an application for Travelers that want to travel Australia! See
+                                </Card.Text>
+                                <Button variant="light" target="_blank" href="https://notetaker133.herokuapp.com/" rel="noreferrer">See
+                                Application</Button>
+                                <Card.Link target="_blank" href="https://github.com/arob0017/Express_Notetaker" rel="noreferrer">Github Repo</Card.Link>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    <Col>
+                        <Card className="smallCard">
+                            <Card.Img variant="top" src="./photos/Weather-Dashboard.gif" alt="Screenshot of Application" />
+                            <Card.Body>
+                                <Card.Title>Weather Dashboard</Card.Title>
+                                <Card.Text>This is an application for Travelers that want to travel Australia! See
                                 any Australian city's forecast for the current day and following week!
-
-                                </p>
-                                <a target="_blank" href="https://arob0017.github.io/Weather_Dashboard/"
-                                    rel="noreferrer" class="btn btn-light">See Application</a>
-                                <a target="_blank" href="https://github.com/arob0017/Weather_Dashboard" rel="noreferrer">Github Repo</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                                </Card.Text>
+                                <Button variant="light" target="_blank" href="https://arob0017.github.io/Weather_Dashboard/"
+                                    rel="noreferrer">See Application</Button>
+                                <Card.Link target="_blank" href="https://github.com/arob0017/Weather_Dashboard" rel="noreferrer">Github Repo</Card.Link>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                </Row>
             </section>
 
-            <section id="performance" class="box">
+            <section id="performance" className="box">
                 <h3>Performance</h3>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="row" class="col-md-12">
-                            <img class="col-md-12" src="photos/perf-recite.JPG" alt="Performing my recital 2018" />
-                            <img class="col-md-12" src="photos/jam.JPG" alt="jam" />
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="row">
-                            <img class="col-md-12" src="photos/perf-synths.JPG" alt="Prato performance with synths" />
-                            <img class="col-md-12" src="photos/piano.jpg" alt="piano" />
-                        </div>
-                    </div>
-                    <div class="col-md-4" class="center">
-                        <img class="col-md-12" src="photos/musicme2.jpeg" alt="photoshoot img" />
-                    </div>
-                </div>
+                <Row>
+                    <Col>
+                        <Row>
+                            <Col>
+                                <img src="photos/perf-recite.JPG" alt="Performing my recital 2018" />
+                            </Col>
+                            <Col>
+                                <img src="photos/jam.JPG" alt="jam" />
+                            </Col>
+                        </Row>
+                    </Col>
+                    <Col>
+                        <Row>
+                            <Col>
+                                <img src="photos/perf-synths.JPG" alt="Prato performance with synths" />
+                            </Col>
+                            <Col>
+                                <img src="photos/piano.jpg" alt="piano" />
+                            </Col>
+                        </Row>
+                    </Col>
+                    <Col className="center">
+                        <img src="photos/musicme2.jpeg" alt="photoshoot img" />
+                    </Col>
+                </Row>
             </section>
 
-            <section id="teaching" class="box">
+            <section id="teaching" className="box">
                 <h3>Teaching</h3>
-                <div class="row">
-                    <img class="col-md-3" src="photos/books.jpg" alt="books" />
-                    <img class="col-md-3" src="photos/books.jpg" alt="books" />
-                    <img class="col-md-3" src="photos/books.jpg" alt="books" />
-                    <img class="col-md-3" src="photos/books.jpg" alt="books" />
-                </div>
+                <Row>
+                    <Col>
+                        <img src="photos/books.jpg" alt="books" />
+                    </Col>
+                    <Col>
+                        <img src="photos/books.jpg" alt="books" />
+                    </Col>
+                    <Col>
+                        <img src="photos/books.jpg" alt="books" />
+                    </Col>
+                    <Col>
+                        <img src="photos/books.jpg" alt="books" />
+                    </Col>
+                </Row>
             </section>
 
-            <section id="photography" class="box">
+            <section id="photography" className="box">
                 <h3>Photography</h3>
-                <div class="row">
-                    <img class="col-md-6" src="photos/prato-sunset1.jpeg" alt="Prato, Italy Sunset" />
-                    <img class="col-md-6" src="photos/lake.jpg" alt="Prato, Italy Lake" />
-                </div>
-                <div class="row">
-                    <img class="col-md-6" src="photos/lamp-post.jpeg" alt="Slazburg lamp-post" />
-                    <img class="col-md-6" src="photos/prato-sunset2.jpeg" alt="Prato, Tree Sunset" />
-                </div>
+                <Row>
+                    <Col>
+                        <img src="photos/prato-sunset1.jpeg" alt="Prato, Italy Sunset" />
+                    </Col>
+                    <Col>
+                        <img src="photos/lake.jpg" alt="Prato, Italy Lake" />
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <img src="photos/lamp-post.jpeg" alt="Slazburg lamp-post" />
+                    </Col>
+                    <Col>
+                        <img src="photos/prato-sunset2.jpeg" alt="Prato, Tree Sunset" />
+                    </Col>
+                </Row>
             </section>
 
 
