@@ -1,23 +1,23 @@
 import React from "react";
 import "./style.css";
-
+import { Col, Container, Jumbotron, Row } from "react-bootstrap";
 
 function Home() {
     return (
-        <div class="container">
-            <div class="jumbotron" class="home">
-                {/* <!--Row 1--> */}
-                <div class="row">
-                    <h2 class="display-4" class="col-sm-12" class="aboutme">About Me</h2>
-                </div>
+        <Container>
+            <Jumbotron className="home">
+                <Row>
+                    <Col>
+                        <h2 class="aboutme">About Me</h2>
+                    </Col>
+                </Row>
 
-                {/* <!--Row 2--> */}
-                <div class="row">
-                    <div class="col-md-5">
-                        <img class="col-md-12" src="photos/About-me-pic.jpg" alt="profile pic" />
-                        <img class="col-md-12" src="photos/music-me.jpeg" alt="Amelia Roberts pic" />
-                    </div>
-                    <div class="col-md-7">
+                <Row>
+                    <Col xs={5}>
+                        <img src="./assets/images/About-me-pic.jpg" alt="profile pic" />
+                        <img src="./assets/images/music-me.jpeg" alt="Amelia Roberts pic" />
+                    </Col>
+                    <Col xs={7}>
                         <h3>Amelia Roberts</h3>
                         <h5>Musician – Teacher – Web Developer</h5>
                         <p>
@@ -63,11 +63,11 @@ function Home() {
                             teaching site in which she will develop herself. It is clear that COVID-19 is not
                             stopping Amelia from achieving her goals.
                         </p>
-                    </div>
-                </div>
-            </div>
+                    </Col>
+                </Row>
+            </Jumbotron>
 
-        </div>
+        </Container>
     )
 }
 
