@@ -2,13 +2,7 @@ import React from "react";
 import "./style.css";
 
 
-function Main() {
-    return (
-
-        <div>
-            <h3>Hey there, main page here</h3>
-        </div>
-    )
+function Main(props) {
+    return <div className='main' {...props} />;
 }
-
 export default Main; 

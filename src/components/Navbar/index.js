@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Nav } from 'react-bootstrap';
 import "./style.css";
-import { Nav } from 'react-bootstrap'
 
 function Navbar() {
     return (
@@ -10,20 +10,41 @@ function Navbar() {
             <h1>Amelia Roberts</h1>
             <Nav className="justify-content-end" activeKey="/home">
                 <Nav.Item>
-                    <Link href="/home">Home</Link>
+                    <Link to="/home"
+                        className={
+                            window.location.pathname === "/contact" ? "active" : ""
+                        }
+                        onClick={() => {
+                            window.location.href = "/contact";
+                        }}
+                    >Home</Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Link href="/portfolio">Portfolio</Link>
+                    <Link to="/portfolio"
+                        className={
+                            window.location.pathname === "/portfolio" ? "active" : ""
+                        }
+                        onClick={() => {
+                            window.location.href = "/portfolio";
+                        }}
+                    >Portfolio</Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Link href="./Resume2020.pdf" target="_blank">Resume</Link>
+                    <Link to="./Resume2020.pdf" target="_blank">Resume</Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Link href="/contact">Contact</Link>
+                    <Link to='/contact'
+                        className={
+                            window.location.pathname === "/contact" ? "active" : ""
+                        }
+                        onClick={() => {
+                            window.location.href = "/contact";
+                        }}
+                    >Contact</Link>
                 </Nav.Item>
 
             </Nav>
-            <div class="background-pianokeys-image"></div>
+            <div className="background-pianokeys-image"></div>
         </header>
     )
 }
