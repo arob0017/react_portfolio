@@ -12,10 +12,10 @@ function Navbar() {
                 <Nav.Item>
                     <Link to="/home"
                         className={
-                            window.location.pathname === "/contact" ? "active" : ""
+                            window.location.pathname === "/home" ? "active" : ""
                         }
                         onClick={() => {
-                            window.location.href = "/contact";
+                            window.location.href = "/home";
                         }}
                     >Home</Link>
                 </Nav.Item>
